@@ -17,12 +17,6 @@ variable "admin_username" {
   description = "The admin username of the virtual machine."
   type        = string
 }
-
-variable "public_key_path" {
-  description = "The file path of the public key to use for SSH access to the virtual machine."
-  type        = string
-}
-
 variable "subnet_id" {
   description = "The ID of the subnet where the virtual machine will be connected."
   type        = string
