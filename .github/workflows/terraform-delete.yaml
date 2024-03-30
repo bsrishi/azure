@@ -2,9 +2,6 @@ name: Terraform Workflow - Delete
 
 on:
   workflow_dispatch:  # Manually trigger the workflow
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
