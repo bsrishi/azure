@@ -1,6 +1,7 @@
 name: Terraform Workflow
 
 on:
+  workflow_dispatch:  # Manually trigger the workflow
   push:
     branches:
       - main
