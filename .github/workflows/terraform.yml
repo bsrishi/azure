@@ -10,7 +10,7 @@ on:
 
 jobs:
   terraform:
-    runs-on: farmhost  # or your self-hosted runner label
+    runs-on: farmhost.in  # or your self-hosted runner label
 
     steps:
     - name: Checkout code
