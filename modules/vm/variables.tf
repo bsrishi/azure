@@ -27,3 +27,10 @@ variable "subnet_id" {
   description = "The ID of the subnet where the virtual machine will be connected."
   type        = string
 }
+
+variable "admin_password" {
+  description = "The password for the admin user of the virtual machine."
+  type        = string
+  sensitive   = true
+}
+
