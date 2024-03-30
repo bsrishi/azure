@@ -1,0 +1,26 @@
+name: Terraform Workflow - Delete
+
+on:
+  workflow_dispatch:  # Manually trigger the workflow
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  terraform:
+    runs-on: farmhost.in  # or your self-hosted runner label
+
+    # Define environment variables for the whole job
+    env:
+      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+    steps:
+    - name: Terraform Destroy
+      run: terraform destroy
+
