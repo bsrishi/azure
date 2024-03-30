@@ -16,13 +16,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Username
-      run: |
-         whoami
-
     - name: Install Azure CLI
       run: |
-       curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+       curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 
     - name: Set up Terraform
