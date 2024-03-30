@@ -17,7 +17,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   network_interface_ids = [azurerm_network_interface.nic.id]
   size                  = "Standard_DS1_v2"
   admin_username        = var.admin_username
-  admin_password        = var.admin_password
+  admin_password        = var.TF_VAR_ADMIN_PASSWORD
 
   os_disk {
     caching              = "ReadWrite"
