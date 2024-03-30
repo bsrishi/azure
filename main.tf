@@ -19,6 +19,6 @@ module "azure_vm" {
   location            = azurerm_resource_group.rg.location
   vm_name             = "myVM"
   admin_username      = "adminuser"
-  public_key_path     = var.admin_password
+  admin_password      = var.TF_VAR_ADMIN_PASSWORD
   subnet_id           = module.azure_vnet.subnet_id
 }
