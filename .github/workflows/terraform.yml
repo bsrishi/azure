@@ -31,11 +31,17 @@ jobs:
       with:
         terraform_version: 1.7.5
 
-    - name: Initialize Terraform
+    - name: Terraform Init
       run: terraform init
+      env:
+        TF_VAR_admin_password: ${{ secrets.TF_VAR_admin_password }}
 
-    - name: Plan Terraform
+    - name: Terraform Plan
       run: terraform plan
+      env:
+        TF_VAR_admin_password: ${{ secrets.TF_VAR_admin_password }}
 
-    - name: Apply Terraform
+    - name: Terraform Apply
       run: terraform apply -auto-approve
+      env:
+        TF_VAR_admin_password: ${{ secrets.TF_VAR_admin_password }}
