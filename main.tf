@@ -17,8 +17,8 @@ module "azure_vm" {
   source              = "./modules/vm"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  vm_name             = "myVM"
-  admin_username      = "adminuser"
+  vm_name             = "farmhost-vm"
+  admin_username      = "azureuser"
   admin_password      = var.admin_password
   subnet_id           = module.azure_vnet.subnet_id
 }
